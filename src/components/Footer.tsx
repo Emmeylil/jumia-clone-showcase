@@ -9,14 +9,14 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-xl">J</span>
+                <span className="text-primary-foreground font-display font-bold text-xl">K</span>
               </div>
               <span className="font-display font-bold text-xl">
-                Jumia<span className="text-primary">Pay</span>
+                Klump <span className="text-primary">× Jumia</span>
               </span>
             </a>
             <p className="text-primary-foreground/70 mb-6 leading-relaxed">
-              Africa's leading Buy Now, Pay Later service. Shop for what you love and pay over time.
+              Africa's leading Buy Now, Pay Later service powered by Klump and Jumia. Shop for what you love and pay over time.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors">
@@ -62,7 +62,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Mail className="w-5 h-5 text-primary" />
-                <span>support@jumiapay.com</span>
+                <span>support@useklump.com</span>
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Phone className="w-5 h-5 text-primary" />
@@ -79,7 +79,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/50 text-sm">
-            © {new Date().getFullYear()} JumiaPay. All rights reserved.
+            © {new Date().getFullYear()} Klump × Jumia. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-primary-foreground/50 hover:text-primary transition-colors">Privacy Policy</a>

@@ -10,14 +10,14 @@ const steps = [
   {
     stepNumber: 1,
     title: "Shop Online",
-    description: "Go shopping at your preferred online store on Jumia and choose the pay-in-instalments option at checkout. The JumiaPay instalment option is now available across hundreds of stores.",
+    description: "Go shopping at your preferred online store on Jumia and choose the pay-in-instalments option at checkout. The Klump instalment option is now available across hundreds of stores.",
     features: ["500+ Partner Stores", "Easy Checkout", "Instant Approval"],
     image: stepShopping,
   },
   {
     stepNumber: 2,
     title: "Review Your Payment Terms",
-    description: "JumiaPay offers a monthly payment plan that gives you more time to pay for the things you desire. These terms have been crafted to help you enjoy a stress-free buying experience.",
+    description: "Klump offers a monthly payment plan that gives you more time to pay for the things you desire. These terms have been crafted to help you enjoy a stress-free buying experience.",
     features: ["Low interest (2-4%)", "No hidden fees", "Flexible terms"],
     image: stepReview,
   },
@@ -31,7 +31,7 @@ const steps = [
   {
     stepNumber: 4,
     title: "Make Your Payments",
-    description: "Use JumiaPay to spread all online payments for your purchases. Make an initial 25% deposit and split the balance into convenient monthly instalments that suit your financial plan.",
+    description: "Use Klump to spread all online payments for your purchases. Make an initial 25% deposit and split the balance into convenient monthly instalments that suit your financial plan.",
     features: ["25% Initial Deposit", "Monthly Instalments", "Auto Reminders"],
     image: stepPayment,
   },
@@ -70,7 +70,7 @@ const HowItWorksSection = () => {
         {/* CTA */}
         <div className="text-center mt-20 lg:mt-32">
           <Button size="xl" className="group">
-            Get Started with JumiaPay
+            Get Started with Klump
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
