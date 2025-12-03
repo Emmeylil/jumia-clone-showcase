@@ -12,10 +12,10 @@ const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xl">J</span>
+              <span className="text-primary-foreground font-display font-bold text-xl">K</span>
             </div>
             <span className="font-display font-bold text-xl text-foreground">
-              Jumia<span className="text-primary">Pay</span>
+              Klump <span className="text-primary">× Jumia</span>
             </span>
           </a>
 
@@ -33,16 +33,6 @@ const Navbar = () => {
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
               Shop
             </a>
-          </div>
-
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Login
-            </Button>
-            <Button size="sm">
-              Sign up
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,14 +60,6 @@ const Navbar = () => {
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2">
                 Shop
               </a>
-              <div className="flex gap-3 pt-4 border-t border-border">
-                <Button variant="outline" className="flex-1">
-                  Login
-                </Button>
-                <Button className="flex-1">
-                  Sign up
-                </Button>
-              </div>
             </div>
           </div>
         )}

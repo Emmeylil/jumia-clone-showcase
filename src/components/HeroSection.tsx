@@ -39,14 +39,14 @@ const HeroSection = () => {
 
         {/* Subheading */}
         <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-up stagger-2 leading-relaxed">
-          Shop for your desired product or service online and use JumiaPay to split
-          your purchase into equal instalments.
+          Shop for your desired product or service online and use Klump to split
+          your purchase into equal instalments on Jumia.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up stagger-3">
           <Button variant="hero" size="xl" className="group">
-            Get started with JumiaPay
+            Get started with Klump
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Button>
           <Button variant="heroOutline" size="xl">
@@ -56,7 +56,7 @@ const HeroSection = () => {
 
         {/* Trust Indicators */}
         <div className="mt-16 animate-fade-up stagger-4">
-          <p className="text-primary-foreground/60 text-sm mb-4">Trusted by thousands of shoppers across Africa</p>
+          <p className="text-primary-foreground/60 text-sm mb-4">Powered by Klump × Jumia partnership</p>
           <div className="flex items-center justify-center gap-8 flex-wrap">
             <div className="flex items-center gap-2 text-primary-foreground/80">
               <div className="w-2 h-2 rounded-full bg-green-400" />
