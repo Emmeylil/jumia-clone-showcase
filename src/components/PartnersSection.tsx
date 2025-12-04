@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const partners = [
   { name: "First Bank", initial: "FB" },
@@ -12,37 +11,40 @@ const partners = [
   { name: "Sterling Bank", initial: "ST" },
 ];
 
+// Duplicate for seamless loop
+const duplicatedPartners = [...partners, ...partners];
+
 const PartnersSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const checkScroll = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-    }
-  };
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    checkScroll();
-    const ref = scrollRef.current;
-    if (ref) {
-      ref.addEventListener("scroll", checkScroll);
-      return () => ref.removeEventListener("scroll", checkScroll);
-    }
-  }, []);
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
 
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const scrollAmount = 300;
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
+    let animationId: number;
+    let scrollPosition = 0;
+    const scrollSpeed = 0.5;
+
+    const animate = () => {
+      if (!isPaused && scrollContainer) {
+        scrollPosition += scrollSpeed;
+        
+        // Reset scroll when we've scrolled through the first set
+        const halfWidth = scrollContainer.scrollWidth / 2;
+        if (scrollPosition >= halfWidth) {
+          scrollPosition = 0;
+        }
+        
+        scrollContainer.scrollLeft = scrollPosition;
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+
+    animationId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationId);
+  }, [isPaused]);
 
   return (
     <section className="py-16 bg-muted/30">
@@ -54,26 +56,16 @@ const PartnersSection = () => {
           </h3>
         </div>
         
-        <div className="relative">
-          {/* Left Arrow */}
-          {canScrollLeft && (
-            <button
-              onClick={() => scroll("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card border border-border shadow-md flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors -ml-2 md:-ml-5"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-          )}
-
-          {/* Slider */}
+        <div className="relative overflow-hidden">
           <div
             ref={scrollRef}
-            className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-2"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            className="flex gap-4 md:gap-6 overflow-x-hidden"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
           >
-            {partners.map((partner) => (
+            {duplicatedPartners.map((partner, index) => (
               <div 
-                key={partner.name}
+                key={`${partner.name}-${index}`}
                 className="flex-shrink-0 group flex items-center gap-3 bg-card px-6 py-4 rounded-2xl border border-border/50 shadow-sm hover:shadow-card hover:border-primary/20 transition-all duration-300 cursor-pointer"
               >
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -85,16 +77,6 @@ const PartnersSection = () => {
               </div>
             ))}
           </div>
-
-          {/* Right Arrow */}
-          {canScrollRight && (
-            <button
-              onClick={() => scroll("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card border border-border shadow-md flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors -mr-2 md:-mr-5"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          )}
         </div>
       </div>
     </section>
