@@ -69,10 +69,12 @@ const HowItWorksSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-20 lg:mt-32">
-          <Button size="xl" className="group">
-            Get Started with Klump
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <a href="https://www.jumia.com.ng/" target="_blank" rel="noopener noreferrer">
+            <Button size="xl" className="group">
+              Get Started with Klump
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </a>
         </div>
       </div>
     </section>

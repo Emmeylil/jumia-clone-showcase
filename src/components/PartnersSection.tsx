@@ -1,10 +1,10 @@
 const partners = [
-  { name: "Jumia", initial: "J" },
-  { name: "Konga", initial: "K" },
-  { name: "Slot", initial: "S" },
-  { name: "PayPorte", initial: "P" },
-  { name: "Jiji", initial: "Ji" },
-  { name: "Yudala", initial: "Y" },
+  { name: "First Bank", initial: "FB" },
+  { name: "GTBank", initial: "GT" },
+  { name: "Access Bank", initial: "AB" },
+  { name: "UBA", initial: "UBA" },
+  { name: "Zenith Bank", initial: "ZB" },
+  { name: "Stanbic IBTC", initial: "SI" },
 ];
 
 const PartnersSection = () => {
@@ -12,9 +12,9 @@ const PartnersSection = () => {
     <section className="py-16 bg-muted/30">
       <div className="container">
         <div className="text-center mb-10">
-          <p className="text-muted-foreground font-medium mb-2">FEATURED STORES</p>
+          <p className="text-muted-foreground font-medium mb-2">FEATURED PARTNERS</p>
           <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-            Shop from 500+ Partner Stores
+            See our Partner Brands
           </h3>
         </div>
         
@@ -25,7 +25,7 @@ const PartnersSection = () => {
               className="group flex items-center gap-3 bg-card px-6 py-4 rounded-2xl border border-border/50 shadow-sm hover:shadow-card hover:border-primary/20 transition-all duration-300 cursor-pointer"
             >
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                <span className="font-display font-bold text-primary">{partner.initial}</span>
+                <span className="font-display font-bold text-primary text-sm">{partner.initial}</span>
               </div>
               <span className="font-medium text-foreground group-hover:text-primary transition-colors">
                 {partner.name}
@@ -36,7 +36,7 @@ const PartnersSection = () => {
 
         <p className="text-center text-muted-foreground mt-8">
           <a href="#" className="text-primary font-semibold hover:underline">
-            View all partner stores →
+            View all partner brands →
           </a>
         </p>
       </div>
