@@ -90,17 +90,6 @@ const FAQSection = () => {
           </Accordion>
         </div>
 
-        {/* Contact CTA */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">Still have questions?</p>
-          <a 
-            href="#" 
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-colors"
-          >
-            Contact our support team
-            <span className="text-lg">→</span>
-          </a>
-        </div>
       </div>
     </section>
   );
