@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import PartnersSection from "@/components/PartnersSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -26,7 +25,6 @@ const Index = () => {
           <HowItWorksSection />
           <FAQSection />
         </main>
-        <Footer />
       </div>
     </>
   );
