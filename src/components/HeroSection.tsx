@@ -45,10 +45,12 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up stagger-3">
-          <Button variant="hero" size="xl" className="group">
-            Get started with Klump
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <a href="https://www.jumia.com.ng/" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="xl" className="group">
+              Get started with Klump
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </a>
           <Button variant="heroOutline" size="xl">
             Learn more
           </Button>

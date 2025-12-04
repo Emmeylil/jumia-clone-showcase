@@ -1,19 +1,18 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import KlumpLogo from "./KlumpLogo";
+import JumiaLogo from "./JumiaLogo";
 
 const Footer = () => {
   return (
-    <footer className="bg-jumia-black text-primary-foreground">
+    <footer className="bg-klump-navy text-primary-foreground">
       <div className="container py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-xl">K</span>
-              </div>
-              <span className="font-display font-bold text-xl">
-                Klump <span className="text-primary">× Jumia</span>
-              </span>
+            <a href="/" className="flex items-center gap-3 mb-6">
+              <KlumpLogo className="h-7 text-primary-foreground" />
+              <span className="text-primary-foreground/60">×</span>
+              <JumiaLogo className="h-7 text-primary-foreground" />
             </a>
             <p className="text-primary-foreground/70 mb-6 leading-relaxed">
               Africa's leading Buy Now, Pay Later service powered by Klump and Jumia. Shop for what you love and pay over time.

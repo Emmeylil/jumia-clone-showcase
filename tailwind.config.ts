@@ -59,6 +59,11 @@ export default {
           gray: "hsl(var(--jumia-gray))",
           light: "hsl(var(--jumia-light))",
         },
+        klump: {
+          navy: "hsl(var(--klump-navy))",
+          "navy-light": "hsl(var(--klump-navy-light))",
+          "navy-dark": "hsl(var(--klump-navy-dark))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
