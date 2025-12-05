@@ -6,8 +6,8 @@ const PartnersSection = () => {
       <div className="container">
         <div className="text-center">
           <p className="text-muted-foreground font-medium mb-4">POWERED BY</p>
-          <div className="flex justify-center items-center">
-            <div className="bg-card px-10 py-6 rounded-2xl border border-border/50 shadow-sm">
+        <div className="flex justify-center items-center">
+            <div className="bg-[#4B0082] px-10 py-6 rounded-2xl shadow-lg">
               <img 
                 src={klumpLogo} 
                 alt="Klump Logo"
