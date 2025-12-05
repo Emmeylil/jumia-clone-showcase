@@ -43,36 +43,14 @@ const HeroSection = () => {
           your purchase into equal instalments on Jumia.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up stagger-3">
+        {/* CTA Button */}
+        <div className="flex justify-center animate-fade-up stagger-3">
           <a href="https://www.jumia.com.ng/" target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="xl" className="group">
               Get started with Klump
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </a>
-          <Button variant="heroOutline" size="xl">
-            Learn more
-          </Button>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-16 animate-fade-up stagger-4">
-          <p className="text-primary-foreground/60 text-sm mb-4">Powered by Klump × Jumia partnership</p>
-          <div className="flex items-center justify-center gap-8 flex-wrap">
-            <div className="flex items-center gap-2 text-primary-foreground/80">
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="text-sm font-medium">100K+ Users</span>
-            </div>
-            <div className="flex items-center gap-2 text-primary-foreground/80">
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="text-sm font-medium">500+ Stores</span>
-            </div>
-            <div className="flex items-center gap-2 text-primary-foreground/80">
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="text-sm font-medium">₦1B+ Processed</span>
-            </div>
-          </div>
         </div>
       </div>
 
