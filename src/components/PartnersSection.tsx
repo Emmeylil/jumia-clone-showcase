@@ -1,18 +1,16 @@
 import { useEffect, useRef, useState } from "react";
+import firstbankLogo from "@/assets/firstbank-logo.png";
+import renmoneyLogo from "@/assets/renmoney-logo.png";
+import creditdirectLogo from "@/assets/creditdirect-logo.png";
 
 const partners = [
-  { name: "First Bank", initial: "FB" },
-  { name: "GTBank", initial: "GT" },
-  { name: "Access Bank", initial: "AB" },
-  { name: "UBA", initial: "UBA" },
-  { name: "Zenith Bank", initial: "ZB" },
-  { name: "Stanbic IBTC", initial: "SI" },
-  { name: "Fidelity Bank", initial: "FD" },
-  { name: "Sterling Bank", initial: "ST" },
+  { name: "First Bank", logo: firstbankLogo },
+  { name: "Renmoney", logo: renmoneyLogo },
+  { name: "Credit Direct", logo: creditdirectLogo },
 ];
 
 // Duplicate for seamless loop
-const duplicatedPartners = [...partners, ...partners];
+const duplicatedPartners = [...partners, ...partners, ...partners, ...partners];
 
 const PartnersSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -59,21 +57,20 @@ const PartnersSection = () => {
         <div className="relative overflow-hidden">
           <div
             ref={scrollRef}
-            className="flex gap-4 md:gap-6 overflow-x-hidden"
+            className="flex gap-6 md:gap-10 overflow-x-hidden"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
             {duplicatedPartners.map((partner, index) => (
               <div 
                 key={`${partner.name}-${index}`}
-                className="flex-shrink-0 group flex items-center gap-3 bg-card px-6 py-4 rounded-2xl border border-border/50 shadow-sm hover:shadow-card hover:border-primary/20 transition-all duration-300 cursor-pointer"
+                className="flex-shrink-0 group flex items-center justify-center bg-card px-8 py-6 rounded-2xl border border-border/50 shadow-sm hover:shadow-card hover:border-primary/20 transition-all duration-300 cursor-pointer min-w-[200px]"
               >
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <span className="font-display font-bold text-primary text-sm">{partner.initial}</span>
-                </div>
-                <span className="font-medium text-foreground group-hover:text-primary transition-colors whitespace-nowrap">
-                  {partner.name}
-                </span>
+                <img 
+                  src={partner.logo} 
+                  alt={`${partner.name} logo`}
+                  className="h-10 md:h-12 w-auto object-contain"
+                />
               </div>
             ))}
           </div>
