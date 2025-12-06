@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 const HeroSection = () => {
   return (
-<section className="relative py-24 md:py-36 flex items-center justify-center overflow-hidden gradient-hero">
+    <section className="relative py-24 md:py-36 flex items-center justify-center overflow-hidden gradient-hero">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-foreground rounded-full blur-3xl" />
@@ -29,18 +29,18 @@ const HeroSection = () => {
 
         {/* Main Heading */}
         <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-up stagger-1 leading-tight">
-          Buy Anything Now,
+          Flexible Payment Plans
           <br />
           <span className="relative">
-            Pay in Instalments.
+            for Everyone
             <span className="absolute -bottom-2 left-0 right-0 h-1 bg-primary-foreground/30 rounded-full" />
           </span>
         </h1>
 
-        {/* Subheading */}
+        {/* Subheadline */}
         <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-up stagger-2 leading-relaxed">
-          Shop for your desired product or service online and use Klump to split
-          your purchase into equal instalments on Jumia.
+          Klump helps you buy anything you need on a payment plan that works for you. 
+          You work hard, You deserve the Easy Life. Buy Now Pay Later with Klump!
         </p>
 
         {/* CTA Buttons */}
@@ -51,9 +51,6 @@ const HeroSection = () => {
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </a>
-          <Button variant="heroOutline" size="xl">
-            Learn more
-          </Button>
         </div>
 
         {/* Trust Indicators */}

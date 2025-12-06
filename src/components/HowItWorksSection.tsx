@@ -1,39 +1,31 @@
-import StepCard from "./StepCard";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import stepShopping from "@/assets/step-shopping.png";
-import stepReview from "@/assets/step-review.png";
-import stepVerify from "@/assets/step-verify.png";
-import stepPayment from "@/assets/step-payment.png";
+import { ArrowRight, Store, CreditCard, UserCheck, FileText, Wallet } from "lucide-react";
 
 const steps = [
   {
-    stepNumber: 1,
-    title: "Shop Online",
-    description: "Go shopping at your preferred online store on Jumia and choose the pay-in-instalments option at checkout. The Klump instalment option is now available across hundreds of stores.",
-    features: ["500+ Partner Stores", "Easy Checkout", "Instant Approval"],
-    image: stepShopping,
+    icon: Store,
+    title: "Select Store and Shop",
+    description: "Choose merchant with your desired product or service",
   },
   {
-    stepNumber: 2,
-    title: "Review Your Payment Terms",
-    description: "Klump offers a monthly payment plan that gives you more time to pay for the things you desire. These terms have been crafted to help you enjoy a stress-free buying experience.",
-    features: ["Low interest (2-4%)", "No hidden fees", "Flexible terms"],
-    image: stepReview,
+    icon: CreditCard,
+    title: "Choose Pay with Klump",
+    description: "Select Pay with Klump as desired checkout method",
   },
   {
-    stepNumber: 3,
-    title: "Quick Eligibility Check",
-    description: "Using our proprietary credit eligibility and fraud detection engine, we are equipped to make credit granting decisions on all our customers within 3 minutes.",
-    features: ["ID Verification", "Income Check", "BVN Verification"],
-    image: stepVerify,
+    icon: UserCheck,
+    title: "Verification of Information",
+    description: "Fill required details and pause for a quick verification",
   },
   {
-    stepNumber: 4,
-    title: "Make Your Payments",
-    description: "Use Klump to spread all online payments for your purchases. Make an initial 25% deposit and split the balance into convenient monthly instalments that suit your financial plan.",
-    features: ["25% Initial Deposit", "Monthly Instalments", "Auto Reminders"],
-    image: stepPayment,
+    icon: FileText,
+    title: "Review Payment Term",
+    description: "Evaluate the terms & conditions of your payment schedule",
+  },
+  {
+    icon: Wallet,
+    title: "Pay With Klump",
+    description: "Make your initial 25% of your purchase and spread the balance over a 12-month period",
   },
 ];
 
@@ -42,33 +34,56 @@ const HowItWorksSection = () => {
     <section id="how-it-works" className="py-20 lg:py-32 bg-background">
       <div className="container">
         {/* Section Header */}
-        <div className="text-center mb-16 lg:mb-24">
+        <div className="text-center mb-16 lg:mb-20">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Simple Steps to <span className="text-gradient">Financial Freedom</span>
+            Paying With Klump <span className="text-gradient">Is Easy</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Get started in minutes and spread your payments over time
+            Quick Integration, No Application, No Hidden Fees. The Easy Life
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="space-y-20 lg:space-y-32">
-          {steps.map((step, index) => (
-            <div 
-              key={step.stepNumber}
-              className="opacity-0 animate-fade-up"
-              style={{ animationDelay: `${index * 0.15}s`, animationFillMode: 'forwards' }}
-            >
-              <StepCard
-                {...step}
-                reversed={index % 2 !== 0}
-              />
+        {/* Steps Timeline */}
+        <div className="max-w-4xl mx-auto">
+          <div className="relative">
+            {/* Vertical Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block" />
+
+            {/* Steps */}
+            <div className="space-y-8">
+              {steps.map((step, index) => (
+                <div
+                  key={index}
+                  className="relative flex gap-6 md:gap-8 items-start opacity-0 animate-fade-up"
+                  style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
+                >
+                  {/* Step Number Circle */}
+                  <div className="relative z-10 flex-shrink-0">
+                    <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shadow-lg">
+                      <step.icon className="w-7 h-7 text-primary-foreground" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 bg-card rounded-2xl p-6 border border-border/50 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-0.5">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-sm font-bold text-primary">STEP {index + 1}</span>
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-foreground mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-20 lg:mt-32">
+        <div className="text-center mt-16 lg:mt-20">
           <a href="https://www.jumia.com.ng/" target="_blank" rel="noopener noreferrer">
             <Button size="xl" className="group">
               Get Started with Klump
