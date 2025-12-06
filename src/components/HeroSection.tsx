@@ -39,7 +39,7 @@ const HeroSection = () => {
 
         {/* Subheadline */}
         <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-up stagger-2 leading-relaxed">
-          Klump helps you buy anything you need on a payment plan that works for you. 
+          Klump helps you buy anything you need on a payment plan that works for you when you buy on Jumia. 
           You work hard, You deserve the Easy Life. Buy Now Pay Later with Klump!
         </p>
 
