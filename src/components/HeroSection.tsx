@@ -52,25 +52,6 @@ const HeroSection = () => {
             </Button>
           </a>
         </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-16 animate-fade-up stagger-4">
-          <p className="text-primary-foreground/60 text-sm mb-4">Powered by Klump × Jumia partnership</p>
-          <div className="flex items-center justify-center gap-8 flex-wrap">
-            <div className="flex items-center gap-2 text-primary-foreground/80">
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="text-sm font-medium">100K+ Users</span>
-            </div>
-            <div className="flex items-center gap-2 text-primary-foreground/80">
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="text-sm font-medium">500+ Stores</span>
-            </div>
-            <div className="flex items-center gap-2 text-primary-foreground/80">
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="text-sm font-medium">₦1B+ Processed</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Bottom Wave */}

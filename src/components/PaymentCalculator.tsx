@@ -10,6 +10,8 @@ const PaymentCalculator = () => {
       1: 2,
       2: 2.5,
       3: 3,
+      6: 4,
+      12: 5,
     };
     
     const interestRate = interestRates[months] || 3;
@@ -74,12 +76,12 @@ const PaymentCalculator = () => {
                 <h3 className="font-display text-lg font-semibold text-foreground mb-4">
                   For how long...
                 </h3>
-                <div className="flex gap-3">
-                  {[1, 2, 3].map((m) => (
+                <div className="flex flex-wrap gap-3">
+                  {[1, 2, 3, 6, 12].map((m) => (
                     <button
                       key={m}
                       onClick={() => setMonths(m)}
-                      className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all ${
+                      className={`py-3 px-5 rounded-xl font-semibold transition-all ${
                         months === m
                           ? "bg-primary text-primary-foreground"
                           : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
