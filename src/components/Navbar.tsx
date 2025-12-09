@@ -11,10 +11,10 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logos */}
-          <a href="/" className="flex items-center gap-3">
-            <KlumpLogo className="h-7" />
-            <span className="text-muted-foreground font-medium">×</span>
-            <JumiaLogo className="h-7" />
+          <a href="/" className="flex items-center gap-2 md:gap-3">
+            <KlumpLogo className="h-5 md:h-7" />
+            <span className="text-muted-foreground font-medium text-sm md:text-base">×</span>
+            <JumiaLogo className="h-5 md:h-7" />
           </a>
 
           {/* Desktop Navigation */}
