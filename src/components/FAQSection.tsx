@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     question: "How do I contact Jumia customer service?",
-    answer: "For order-related inquiries, please contact Jumia customer service directly through the Jumia app or website. For Klump payment questions, reach out to support@useklump.com.",
+    answer: "For order-related inquiries, please contact Jumia customer service directly through the Jumia app or website.",
   },
 ];
 
