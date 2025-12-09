@@ -4,8 +4,8 @@ import { ArrowRight, Store, CreditCard, UserCheck, FileText, Wallet } from "luci
 const steps = [
   {
     icon: Store,
-    title: "Select Store and Shop",
-    description: "Choose merchant with your desired product or service",
+    title: "Select Your Product",
+    description: "Choose the item you want and add it to your cart",
   },
   {
     icon: CreditCard,

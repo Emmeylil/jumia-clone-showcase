@@ -8,14 +8,14 @@ import {
 const faqs = [
   {
     question: "What is Klump?",
-    answer: "Klump Technology Company Ltd is a Nigerian based fintech company whose flagship product; Klump BNPL accords users the financial freedom to spread purchase payments over monthly instalments. The Klump Checkout option is now available on a significant number of online platforms including Jumia.",
+    answer: "Klump Technology Company Ltd is a Nigerian based fintech company whose flagship product; Klump BNPL accords users the financial freedom to spread purchase payments over monthly instalments. The Klump Checkout option is now available on Jumia.",
   },
   {
     question: "How does Klump BNPL work?",
-    answer: "Simply shop on Jumia or any Klump partner store, select Klump at checkout, pay 25% upfront, and spread the remaining balance over 2-4 monthly instalments. Our quick eligibility check takes less than 3 minutes.",
+    answer: "Simply shop on Jumia, select Klump at checkout, pay 25% upfront, and spread the remaining balance over 2-4 monthly instalments. Our quick eligibility check takes less than 3 minutes.",
   },
   {
-    question: "Am I eligible for Klump's Pay in 4 plan?",
+    question: "Am I eligible for Klump's BNPL?",
     answer: "To be eligible, you need to be a Nigerian resident with a valid BVN, have a steady source of income, and pass our quick credit assessment. The process is fast and completely digital.",
   },
   {
@@ -39,20 +39,8 @@ const faqs = [
     answer: "You'll receive SMS and email notifications before each payment is due. We also send reminders to ensure you never miss a payment date.",
   },
   {
-    question: "Why haven't I gotten my order?",
-    answer: "Order delivery is handled by the merchant (e.g., Jumia). Please contact the store directly for delivery updates. Once your order is confirmed, your payment plan remains active.",
-  },
-  {
-    question: "Why is my order still processing?",
-    answer: "Order processing times vary by merchant. If your Klump payment was successful but the order is still processing, please contact the merchant's customer service for assistance.",
-  },
-  {
-    question: "Can I get multiple Klump loans?",
-    answer: "Yes, you can have multiple active Klump plans depending on your credit limit and repayment history. Consistent on-time payments can increase your eligibility for additional plans.",
-  },
-  {
-    question: "Can I send Klump a message?",
-    answer: "Yes! You can reach us via email at support@useklump.com, through our website chat, or via our social media channels. Our support team is available to help with any questions.",
+    question: "How do I contact Jumia customer service?",
+    answer: "For order-related inquiries, please contact Jumia customer service directly through the Jumia app or website. For Klump payment questions, reach out to support@useklump.com.",
   },
 ];
 
