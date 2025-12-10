@@ -126,7 +126,7 @@ const PaymentCalculator = () => {
               </div>
 
               <p className="text-sm text-muted-foreground mt-6 leading-relaxed">
-                Your rate will be {calculations.interestRate}% interest based on credit, and is subject to an eligibility check. Payment options through Klump are provided by these lending partners.
+                These results are based on a sample 3% interest scenario and are subject to lender eligibility checks. Actual interest rates, fees, and loan terms may vary depending on the selected lending partner.
               </p>
             </div>
 

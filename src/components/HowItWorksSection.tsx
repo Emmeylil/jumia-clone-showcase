@@ -1,31 +1,31 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Store, CreditCard, UserCheck, FileText, Wallet } from "lucide-react";
+import { ArrowRight, ShoppingCart, CreditCard, UserCheck, FileText, Wallet } from "lucide-react";
 
 const steps = [
   {
-    icon: Store,
-    title: "Select Your Product",
-    description: "Choose the item you want and add it to your cart",
+    icon: ShoppingCart,
+    title: "Add Items & Select Klump",
+    description: "Add items to cart and select \"Buy Now, Pay Later – Klump\" at checkout.",
   },
   {
     icon: CreditCard,
-    title: "Choose Pay with Klump",
-    description: "Select Pay with Klump as desired checkout method",
+    title: "Choose Your Lender",
+    description: "Choose your preferred lender from the list.",
   },
   {
     icon: UserCheck,
-    title: "Verification of Information",
-    description: "Fill required details and pause for a quick verification",
+    title: "Provide Required Details",
+    description: "Provide required banking and ID details for quick eligibility.",
   },
   {
     icon: FileText,
-    title: "Review Payment Term",
-    description: "Evaluate the terms & conditions of your payment schedule",
+    title: "Make First Payment",
+    description: "If approved, make your first payment (typically 20%–30%; some lenders require no deposit).",
   },
   {
     icon: Wallet,
-    title: "Pay With Klump",
-    description: "Make your initial 25% of your purchase and spread the balance over a 12-month period",
+    title: "Complete Checkout",
+    description: "Accept loan terms and complete checkout. Future installments are automatically deducted by the lender.",
   },
 ];
 
@@ -36,10 +36,10 @@ const HowItWorksSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 lg:mb-20">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Paying With Klump <span className="text-gradient">Is Easy</span>
+            Paying With Klump on Jumia <span className="text-gradient">Is Easy</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Quick Integration, No Application, No Hidden Fees. The Easy Life
+            Quick Eligibility • Transparent Pricing • Complete Checkout in 5 Minutes
           </p>
         </div>
 
