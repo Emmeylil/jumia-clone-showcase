@@ -11,6 +11,10 @@ const faqs = [
     answer: "Klump is a Buy Now, Pay Later (BNPL) financial technology company that partners with merchants and banks to give you the option of paying for your purchases in flexible installments both online and in-store.",
   },
   {
+    question: "What are the eligibility criteria for Klump BNPL?",
+    answer: "Eligibility varies depending on the chosen lender. However, customers generally have higher chances of approval if they: Are at least 21 years old, have an active bank account with consistent inflow (salary or business), provide a valid Nigerian ID (NIN, Driver's License, Passport, Voter's Card), and use a salary bank account for the eligibility check (required by many lenders).",
+  },
+  {
     question: "Does Klump provide the loan directly?",
     answer: "No. Klump is not a lender. The actual financing is provided by partner banks who evaluate your application and make the credit decision.",
   },
