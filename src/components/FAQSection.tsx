@@ -8,39 +8,59 @@ import {
 const faqs = [
   {
     question: "What is Klump?",
-    answer: "Klump Technology Company Ltd is a Nigerian based fintech company whose flagship product; Klump BNPL accords users the financial freedom to spread purchase payments over monthly instalments. The Klump Checkout option is now available on Jumia.",
+    answer: "Klump is a Buy Now, Pay Later (BNPL) financial technology company that partners with merchants and banks to give you the option of paying for your purchases in flexible installments both online and in-store.",
   },
   {
-    question: "How does Klump BNPL work?",
-    answer: "Simply shop on Jumia, select Klump at checkout, pay 25% upfront, and spread the remaining balance over 2-4 monthly instalments. Our quick eligibility check takes less than 3 minutes.",
+    question: "Does Klump provide the loan directly?",
+    answer: "No. Klump is not a lender. The actual financing is provided by partner banks who evaluate your application and make the credit decision.",
   },
   {
-    question: "Am I eligible for Klump's BNPL?",
-    answer: "To be eligible, you need to be a Nigerian resident with a valid BVN, have a steady source of income, and pass our quick credit assessment. The process is fast and completely digital.",
+    question: "How does the BNPL process work?",
+    answer: "Add items to your cart. At checkout, select \"Pay with Klump\". Choose a lending partner from the list. Provide required banking and ID details for eligibility check. If approved, make your first payment (typically 20% – 30% upfront). The remaining balance will be automatically deducted in installments.",
   },
   {
-    question: "What information do I need to provide to join Klump?",
-    answer: "You'll need to provide your BVN, a valid government-issued ID, proof of income or bank statement, and a valid phone number and email address for verification.",
+    question: "What is Klump's interest rate?",
+    answer: "Klump does not charge loan interest. Lenders on the Klump network determine their own interest rates.",
+  },
+  {
+    question: "What additional information do customers need to provide before they can join?",
+    answer: "Before completing a BNPL checkout, customers must: Fill in basic information for lender credit assessment, provide ID, BVN, bank details, and other lender-specific requirements, and complete any lender verification process (phone OTP, facial verification, etc.). Note: A refund on Jumia does not cancel an approved loan. Customers can repurchase an item of the same value, or top up their Klump Wallet to purchase a higher-priced item. Refunds are not issued as cash.",
+  },
+  {
+    question: "Why is my bank not listed?",
+    answer: "We are continuously working to onboard more banks. In the meantime, you can select lenders like Credit Direct or Renmoney, which allow customers to access financing even if they don't bank with them.",
+  },
+  {
+    question: "Will I need to link my bank account to Klump?",
+    answer: "No. You do not link your bank account directly to Klump. The bank you select may request your banking details to conduct a credit check and assess eligibility for the loan.",
+  },
+  {
+    question: "What information is required to apply?",
+    answer: "You need an active bank account with regular cash flow (salary or business income) and valid proof of identification (government-issued ID).",
+  },
+  {
+    question: "When will I know my repayment terms?",
+    answer: "Repayment terms (installments, duration, interest rates) will be presented as you go through the loan application process. You'll review and agree to these terms before the loan is finalized.",
+  },
+  {
+    question: "What happens if my application is declined?",
+    answer: "If your application is declined by one bank, you may try again with another bank listed on our platform, as approval criteria vary between lending partners.",
+  },
+  {
+    question: "Why was my interest rate high?",
+    answer: "The interest rate is set by the financing bank based on their lending policies and your credit profile. Klump does not control or influence the rates offered by partner banks.",
+  },
+  {
+    question: "Does Klump sell or stock the items directly?",
+    answer: "No. Klump does not hold stock or sell products. Instead, merchants like Jumia list their products on platforms where Klump's BNPL service is integrated. The bank finances your purchase directly with the merchant once your loan is approved.",
+  },
+  {
+    question: "What if I encounter any issues with my transaction?",
+    answer: "You can contact Klump's customer support team at any time on support@useklump.com or call 09088453555. We're here to assist you throughout the application and repayment process.",
   },
   {
     question: "Is my personal information safe?",
-    answer: "Absolutely. We use bank-grade encryption to protect your data. Your information is never shared with third parties without your consent, and we comply with all data protection regulations.",
-  },
-  {
-    question: "Can I make payments earlier than I agreed to?",
-    answer: "Yes! You can pay off your balance early at any time without any prepayment penalties. Early payment can also improve your credit score for future purchases.",
-  },
-  {
-    question: "What is the Klump interest rate?",
-    answer: "Our interest rates range from 2-4% per month depending on your credit profile and the repayment tenure you choose. There are no hidden fees or charges.",
-  },
-  {
-    question: "How do I know when I've been charged a payment?",
-    answer: "You'll receive SMS and email notifications before each payment is due. We also send reminders to ensure you never miss a payment date.",
-  },
-  {
-    question: "How do I contact Jumia customer service?",
-    answer: "For order-related inquiries, please contact Jumia customer service directly through the Jumia app or website.",
+    answer: "Yes. Your personal and banking information is securely handled and only shared with your chosen bank for credit evaluation purposes.",
   },
 ];
 

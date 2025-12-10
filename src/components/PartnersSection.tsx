@@ -15,7 +15,7 @@ const PartnersSection = () => {
         <div className="text-center mb-10">
           <p className="text-muted-foreground font-medium mb-2">FEATURED PARTNERS</p>
           <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-            See our Partner Brands
+            See Our Partner Banks & Financial Institutions
           </h3>
         </div>
         

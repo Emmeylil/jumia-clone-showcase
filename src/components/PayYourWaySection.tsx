@@ -8,13 +8,13 @@ const features = [
   },
   {
     icon: Calendar,
-    title: "Instalments over 12 months",
-    description: "Spread payments over 12 months after an initial 25% deposit",
+    title: "Flexible Payment Terms",
+    description: "Spread payments between 3 to 12 months depending on the selected lender",
   },
   {
     icon: PiggyBank,
-    title: "Manage Your Budget",
-    description: "Manage your finances better by paying in small chunks every month",
+    title: "Variable Initial Deposit",
+    description: "Initial deposit required may vary from 0% to 50%, depending on the lender",
   },
 ];
 
