@@ -1,5 +1,3 @@
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-
 const lenders = [
   {
     name: "Stanbic",
@@ -104,7 +102,7 @@ const lenders = [
 
 const LendersComparisonSection = () => {
   return (
-    <section className="py-20 lg:py-32 bg-muted/30">
+    <section className="py-20 lg:py-32 bg-background">
       <div className="container">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
@@ -116,63 +114,77 @@ const LendersComparisonSection = () => {
           </p>
         </div>
 
-        {/* Table */}
-        <div className="bg-card rounded-2xl border border-border/50 shadow-card overflow-hidden">
-          <ScrollArea className="w-full">
-            <div className="min-w-[1200px]">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-primary text-primary-foreground">
-                    <th className="text-left py-4 px-4 font-display font-semibold text-sm">Lender</th>
-                    <th className="text-left py-4 px-4 font-display font-semibold text-sm">Initial Deposit</th>
-                    <th className="text-left py-4 px-4 font-display font-semibold text-sm">Loan Tenure</th>
-                    <th className="text-left py-4 px-4 font-display font-semibold text-sm">Loan Limit</th>
-                    <th className="text-left py-4 px-4 font-display font-semibold text-sm">Required Info</th>
-                    <th className="text-left py-4 px-4 font-display font-semibold text-sm">Monthly Interest</th>
-                    <th className="text-left py-4 px-4 font-display font-semibold text-sm">Fees</th>
-                    <th className="text-left py-4 px-4 font-display font-semibold text-sm">Bank Requirement</th>
-                    <th className="text-left py-4 px-4 font-display font-semibold text-sm">Time</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {lenders.map((lender, index) => (
-                    <tr 
-                      key={lender.name}
-                      className={`border-b border-border/50 hover:bg-muted/50 transition-colors ${
-                        index % 2 === 0 ? "bg-background" : "bg-muted/20"
-                      }`}
-                    >
-                      <td className="py-4 px-4 font-semibold text-foreground">{lender.name}</td>
-                      <td className="py-4 px-4 text-muted-foreground">
-                        <span className={`inline-block px-2 py-1 rounded-lg text-xs font-medium ${
-                          lender.deposit === "Nil" 
-                            ? "bg-green-500/10 text-green-600" 
-                            : "bg-primary/10 text-primary"
-                        }`}>
-                          {lender.deposit}
-                        </span>
-                      </td>
-                      <td className="py-4 px-4 text-muted-foreground">{lender.tenure}</td>
-                      <td className="py-4 px-4 text-muted-foreground">{lender.loanLimit}</td>
-                      <td className="py-4 px-4 text-muted-foreground text-sm max-w-[200px]">{lender.requiredInfo}</td>
-                      <td className="py-4 px-4 text-muted-foreground">{lender.interest}</td>
-                      <td className="py-4 px-4 text-muted-foreground text-sm">{lender.fees}</td>
-                      <td className="py-4 px-4 text-muted-foreground text-sm max-w-[180px]">{lender.bankRequirement}</td>
-                      <td className="py-4 px-4">
-                        <span className="inline-block px-2 py-1 rounded-lg text-xs font-medium bg-secondary text-secondary-foreground">
-                          {lender.time}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+        {/* Lender Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {lenders.map((lender) => (
+            <div
+              key={lender.name}
+              className="bg-card rounded-2xl border border-border/50 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
+            >
+              {/* Card Header */}
+              <div className="bg-primary px-5 py-4 flex items-center justify-between">
+                <h3 className="font-display font-bold text-primary-foreground text-lg">
+                  {lender.name}
+                </h3>
+                <span className="text-xs font-medium bg-primary-foreground/20 text-primary-foreground px-2 py-1 rounded-lg">
+                  {lender.time}
+                </span>
+              </div>
+
+              {/* Card Body */}
+              <div className="p-5 space-y-4">
+                {/* Deposit Badge */}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-muted-foreground">Initial Deposit</span>
+                  <span className={`text-sm font-semibold px-3 py-1 rounded-full ${
+                    lender.deposit === "Nil" 
+                      ? "bg-green-500/10 text-green-600" 
+                      : "bg-primary/10 text-primary"
+                  }`}>
+                    {lender.deposit}
+                  </span>
+                </div>
+
+                {/* Details Grid */}
+                <div className="space-y-3 pt-2 border-t border-border/50">
+                  <div className="flex justify-between items-start gap-2">
+                    <span className="text-sm text-muted-foreground shrink-0">Loan Tenure</span>
+                    <span className="text-sm font-medium text-foreground text-right">{lender.tenure}</span>
+                  </div>
+                  
+                  <div className="flex justify-between items-start gap-2">
+                    <span className="text-sm text-muted-foreground shrink-0">Loan Limit</span>
+                    <span className="text-sm font-medium text-foreground text-right">{lender.loanLimit}</span>
+                  </div>
+                  
+                  <div className="flex justify-between items-start gap-2">
+                    <span className="text-sm text-muted-foreground shrink-0">Monthly Interest</span>
+                    <span className="text-sm font-medium text-foreground text-right">{lender.interest}</span>
+                  </div>
+                  
+                  <div className="flex justify-between items-start gap-2">
+                    <span className="text-sm text-muted-foreground shrink-0">Fees</span>
+                    <span className="text-sm font-medium text-foreground text-right">{lender.fees}</span>
+                  </div>
+                </div>
+
+                {/* Additional Info */}
+                <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div>
+                    <span className="text-xs text-muted-foreground block mb-1">Required Info</span>
+                    <span className="text-xs text-foreground">{lender.requiredInfo}</span>
+                  </div>
+                  <div>
+                    <span className="text-xs text-muted-foreground block mb-1">Bank Requirement</span>
+                    <span className="text-xs text-foreground">{lender.bankRequirement}</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
+          ))}
         </div>
 
-        <p className="text-center text-sm text-muted-foreground mt-6">
+        <p className="text-center text-sm text-muted-foreground mt-8">
           * Terms and conditions apply. Loan approval is subject to lender eligibility checks.
         </p>
       </div>
