@@ -12,7 +12,7 @@ const HeroSection = () => {
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
@@ -39,13 +39,13 @@ const HeroSection = () => {
 
         {/* Subheadline */}
         <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-up stagger-2 leading-relaxed">
-          Klump helps you buy anything you need on a payment plan that works for you when you buy on Jumia. 
+          Klump helps you buy anything you need on a payment plan that works for you when you buy on Jumia.
           You work hard, You deserve the Easy Life. Buy Now Pay Later with Klump!
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up stagger-3">
-          <a href="https://www.jumia.com.ng/" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="xl" className="group">
               Get started with Klump
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -57,8 +57,8 @@ const HeroSection = () => {
       {/* Bottom Wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-          <path 
-            d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" 
+          <path
+            d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
             fill="hsl(var(--background))"
           />
         </svg>
